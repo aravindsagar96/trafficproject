@@ -16,7 +16,7 @@ if uploaded_file is not None:
     data = pd.read_excel(uploaded_file)
     data
     g = nx.karate_club_graph()
-    g = nx.from_pandas_edgelist(data, source = "Origin", target = "Destination", edge_attr=['Distance_meters','Route','Duration_min_minutes']) #Use the Graph API to create an empty network graph object
+    g = nx.from_pandas_edgelist(data, source = "Origin", target = "Destination", edge_attr=['Duration(minutes)','Distance(Kilometers)']) #Use the Graph API to create an empty network graph object
 
     partition = nx_comm.louvain_communities(g)
 
