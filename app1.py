@@ -65,5 +65,5 @@ if uploaded_file is not None:
     if st.button("Click to show edge betweeness centrality of graph"):
         edge_BC = nx.edge_betweenness_centrality(g)
         st.info(sorted(edge_BC.items(), key=lambda edge_BC : (edge_BC[1], edge_BC[0]), reverse = True))
-        st.subheader("Thanks for visit.")
-        st.balloons()
+    st.subheader("Thanks for visit.")
+    st.balloons()
