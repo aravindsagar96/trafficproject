@@ -9,11 +9,7 @@ import networkx.algorithms.community as nx_comm
 st.title('Shuttle Services - Optimal traffic routes prediction')
 st.markdown('Karate Club Graph')
 
-html_temp = """
-<div style = "background-color:tomato;padding:10px">
-<h2 style = "color:white;text-align:center;">streamlit traffic route ml app </h2>
-</div>
-"""
+
 uploaded_file = st.file_uploader(" ", type=['xlsx']) #Only accepts excel file format
 
 if uploaded_file is not None:     
