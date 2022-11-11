@@ -5,11 +5,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import networkx.algorithms.community as nx_comm
-#from community import community_louvain
 
 st.title('Shuttle Services - Optimal traffic routes prediction')
 st.markdown('Karate Club Graph')
 
+html_temp = """
+<div style = "background-color:tomato;padding:10px">
+<h2 style = "color:white;text-align:center;">streamlit traffic route ml app </h2>
+</div>
+"""
 uploaded_file = st.file_uploader(" ", type=['xlsx']) #Only accepts excel file format
 
 if uploaded_file is not None:     
@@ -67,3 +71,4 @@ if uploaded_file is not None:
         st.info(sorted(edge_BC.items(), key=lambda edge_BC : (edge_BC[1], edge_BC[0]), reverse = True))
     st.subheader("Thanks for visit.")
     st.balloons()
+    
